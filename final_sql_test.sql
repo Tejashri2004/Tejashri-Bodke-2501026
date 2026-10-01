@@ -58,9 +58,9 @@ select d.dept_name,count(emp_id) from department d left join employees e on  d.d
 
 
 -- Q.8 display the dept anme and average salary for dept whose salary is greate than 70000
-SELECT dept_name, AVG(salary) AS avg_salary
-FROM employee
-GROUP BY dept_name
+SELECT d.dept_name, AVG(e.salary) AS avg_salary
+FROM employees e
+GROUP BY d.dept_name
 HAVING AVG(salary) > 70000;
 
 -- Q.9 Display employee name , salry , location department name using inner join
